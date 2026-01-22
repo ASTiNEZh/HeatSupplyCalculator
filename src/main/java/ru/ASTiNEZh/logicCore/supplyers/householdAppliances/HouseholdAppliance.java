@@ -1,6 +1,6 @@
-package ru.ASTiNEZh.supplyers.householdAppliances;
+package ru.ASTiNEZh.logicCore.supplyers.householdAppliances;
 
-import ru.ASTiNEZh.supplyers.Supplier;
+import ru.ASTiNEZh.logicCore.supplyers.Supplier;
 
 import java.util.Objects;
 

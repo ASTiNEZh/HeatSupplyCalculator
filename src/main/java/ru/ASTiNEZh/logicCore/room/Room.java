@@ -1,15 +1,15 @@
-package ru.ASTiNEZh.room;
+package ru.ASTiNEZh.logicCore.room;
 
 import lombok.Getter;
 import lombok.Setter;
-import ru.ASTiNEZh.supplyers.Supplier;
-import ru.ASTiNEZh.supplyers.householdAppliances.HouseholdAppliance;
-import ru.ASTiNEZh.supplyers.people.Person;
-import ru.ASTiNEZh.supplyers.roofSupply.RoofSupply;
-import ru.ASTiNEZh.supplyers.supplyVentilation.SupplyVentilation;
-import ru.ASTiNEZh.supplyers.windows.SideWorld;
-import ru.ASTiNEZh.supplyers.windows.Window;
-import ru.ASTiNEZh.supplyers.windows.WindowSide;
+import ru.ASTiNEZh.logicCore.supplyers.Supplier;
+import ru.ASTiNEZh.logicCore.supplyers.householdAppliances.HouseholdAppliance;
+import ru.ASTiNEZh.logicCore.supplyers.people.Person;
+import ru.ASTiNEZh.logicCore.supplyers.roofSupply.RoofSupply;
+import ru.ASTiNEZh.logicCore.supplyers.supplyVentilation.SupplyVentilation;
+import ru.ASTiNEZh.logicCore.supplyers.windows.SideWorld;
+import ru.ASTiNEZh.logicCore.supplyers.windows.Window;
+import ru.ASTiNEZh.logicCore.supplyers.windows.WindowSide;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package ru.ASTiNEZh.supplyers.windows;
+package ru.ASTiNEZh.logicCore.supplyers.windows;
 
 public enum SideWorld {
     NORTH,

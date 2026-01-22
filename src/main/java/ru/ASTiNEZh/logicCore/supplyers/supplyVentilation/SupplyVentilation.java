@@ -1,7 +1,7 @@
-package ru.ASTiNEZh.supplyers.supplyVentilation;
+package ru.ASTiNEZh.logicCore.supplyers.supplyVentilation;
 
 import lombok.Getter;
-import ru.ASTiNEZh.supplyers.Supplier;
+import ru.ASTiNEZh.logicCore.supplyers.Supplier;
 
 @Getter
 public class SupplyVentilation extends Supplier {

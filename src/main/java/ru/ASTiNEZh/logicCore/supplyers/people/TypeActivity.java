@@ -1,4 +1,4 @@
-package ru.ASTiNEZh.supplyers.people;
+package ru.ASTiNEZh.logicCore.supplyers.people;
 
 import lombok.Getter;
 

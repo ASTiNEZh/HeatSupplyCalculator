@@ -1,7 +1,7 @@
-package ru.ASTiNEZh.supplyers.roofSupply;
+package ru.ASTiNEZh.logicCore.supplyers.roofSupply;
 
 import lombok.Getter;
-import ru.ASTiNEZh.supplyers.Supplier;
+import ru.ASTiNEZh.logicCore.supplyers.Supplier;
 
 @Getter
 public class RoofSupply extends Supplier {

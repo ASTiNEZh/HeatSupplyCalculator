@@ -1,4 +1,4 @@
-package ru.ASTiNEZh.supplyers;
+package ru.ASTiNEZh.logicCore.supplyers;
 
 import lombok.Getter;
 

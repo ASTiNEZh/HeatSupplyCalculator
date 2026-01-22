@@ -1,7 +1,7 @@
-package ru.ASTiNEZh.supplyers.windows;
+package ru.ASTiNEZh.logicCore.supplyers.windows;
 
 import lombok.Getter;
-import ru.ASTiNEZh.supplyers.Supplier;
+import ru.ASTiNEZh.logicCore.supplyers.Supplier;
 
 @Getter
 public class Window extends Supplier {

@@ -1,4 +1,4 @@
-package ru.ASTiNEZh.supplyers.householdAppliances;
+package ru.ASTiNEZh.logicCore.supplyers.householdAppliances;
 
 import lombok.Getter;
 

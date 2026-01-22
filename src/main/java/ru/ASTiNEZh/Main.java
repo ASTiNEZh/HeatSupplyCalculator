@@ -1,11 +1,11 @@
 package ru.ASTiNEZh;
 
-import ru.ASTiNEZh.room.Room;
-import ru.ASTiNEZh.supplyers.people.Person;
-import ru.ASTiNEZh.supplyers.people.TypeActivity;
-import ru.ASTiNEZh.supplyers.supplyVentilation.SupplyVentilation;
-import ru.ASTiNEZh.supplyers.windows.Window;
-import ru.ASTiNEZh.supplyers.windows.WindowSide;
+import ru.ASTiNEZh.logicCore.room.Room;
+import ru.ASTiNEZh.logicCore.supplyers.people.Person;
+import ru.ASTiNEZh.logicCore.supplyers.people.TypeActivity;
+import ru.ASTiNEZh.logicCore.supplyers.supplyVentilation.SupplyVentilation;
+import ru.ASTiNEZh.logicCore.supplyers.windows.Window;
+import ru.ASTiNEZh.logicCore.supplyers.windows.WindowSide;
 
 import java.util.ArrayList;
 import java.util.List;

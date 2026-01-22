@@ -1,7 +1,7 @@
-package ru.ASTiNEZh.supplyers.people;
+package ru.ASTiNEZh.logicCore.supplyers.people;
 
 import lombok.Getter;
-import ru.ASTiNEZh.supplyers.Supplier;
+import ru.ASTiNEZh.logicCore.supplyers.Supplier;
 
 @Getter
 public class Person extends Supplier {

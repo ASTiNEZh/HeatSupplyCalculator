@@ -1,11 +1,11 @@
-package ru.ASTiNEZh.supplyers.windows;
+package ru.ASTiNEZh.logicCore.supplyers.windows;
 
 import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.ASTiNEZh.supplyers.windows.SideWorld.*;
+import static ru.ASTiNEZh.logicCore.supplyers.windows.SideWorld.*;
 
 /**
  * Касаемо 4х смежных и 3х противоположных сторон света.
