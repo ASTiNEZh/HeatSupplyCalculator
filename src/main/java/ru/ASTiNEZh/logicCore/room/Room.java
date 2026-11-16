@@ -17,30 +17,33 @@ import java.util.*;
 @Getter
 public class Room {
     @Setter
-    private String name;
+    private float number; // номер помещения в архитектурной документации
+    @Setter
+    private String name; // наименование помещения
 
     /** Модификаторы для расчёта */
-    private final float ADJACENT_SIDE = 0.5F;
-    private final float OPPOSITE_SIDE = 0.3F;
+    private final float ADJACENT_SIDE = 0.5F; // коэфициент для суммирования соседнего окна
+    private final float OPPOSITE_SIDE = 0.3F; // коэфициент для сумирования противолежащего окна
 
     /** Окна */
     private List<Window> windows = new ArrayList<>();
-    private float hottestSupply;
+    private float hottestSupply; // колличество ват поступающих от самой жаркой стороны света
     private WindowSide hottestSide;
 
     /** Люди */
     private List<Person> people = new ArrayList<>();
 
     /** Вентиляция */
-    private final SupplyVentilation ventilationSupply;
+    private final SupplyVentilation ventilationSupply; // тепло (ват) от приточного воздуха
 
     /** Кровля */
-    private final RoofSupply roofSupply;
+    private final RoofSupply roofSupply; // тепло (ват) от кровли
 
     /** Бытовая и производственная техника */
-    private final List<HouseholdAppliance> householdAppliances;
+    private final List<HouseholdAppliance> householdAppliances; // оборудование выделяющее тепло
 
     public Room(
+            float number,
             String name,
             List<Window> windows,
             List<Person> people,
@@ -48,26 +51,26 @@ public class Room {
             RoofSupply roofSupply,
             List<HouseholdAppliance> householdAppliances
     ) {
+        this.number = number;
         this.name = name;
         this.windows = windows;
         this.people = people;
         this.ventilationSupply = Objects.nonNull(ventilationSupply)
                 ? ventilationSupply
-                : new SupplyVentilation(0, 0);
+                : null;
         this.roofSupply = Objects.nonNull(roofSupply)
                 ? roofSupply
-                : new RoofSupply(0);
+                : null;
         this.householdAppliances = householdAppliances;
     }
 
-    public SupplyVentilation getVentilationSupply() {
-        return Objects.nonNull(ventilationSupply)? ventilationSupply : new SupplyVentilation(0, 25);
-    }
+//    public SupplyVentilation getVentilationSupply() {
+//        return Objects.nonNull(ventilationSupply)? ventilationSupply : new SupplyVentilation(0, 25);
+//    }
 
-    public RoofSupply getRoofSupply() {
-        return Objects.nonNull(roofSupply)? roofSupply : new RoofSupply(0);
-
-    }
+//    public RoofSupply getRoofSupply() {
+//        return Objects.nonNull(roofSupply)? roofSupply : new RoofSupply(0);
+//    }
 
     public float calculateSupply() {
         float windowsSupply = calculateWindowsSupply();
@@ -116,6 +119,9 @@ public class Room {
                 }
             }
         }
+        else {
+            throw new RuntimeException("пустой список окон");
+        }
     }
 
     public float calculatePeopleSupply() {
@@ -125,6 +131,9 @@ public class Room {
             for (Supplier person : people) {
                 sumPeopleSupply += person.getSuppliedHeat();
             }
+        }
+        else {
+            throw new RuntimeException("пустой список людей");
         }
 
         return sumPeopleSupply;
@@ -137,6 +146,9 @@ public class Room {
             for (Supplier householdAppliance : householdAppliances) {
                 sumHouseholdAppliancesSupply += householdAppliance.getSuppliedHeat();
             }
+        }
+        else {
+            throw new RuntimeException("пустой список оборудования");
         }
 
         return sumHouseholdAppliancesSupply;
