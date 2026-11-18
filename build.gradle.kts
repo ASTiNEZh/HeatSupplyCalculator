@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("jacoco")
     application
 }
 
@@ -22,6 +23,15 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports { html.required.set(true) }
 }
 
 val mainClassName = "ru.ASTiNEZh.Main"
